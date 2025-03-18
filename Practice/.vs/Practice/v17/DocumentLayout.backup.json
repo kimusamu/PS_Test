@@ -7,9 +7,6 @@
       "RelativeMoniker": "D:0:0:{1E09C80C-FAA3-489C-B830-EB837BD353F8}|Practice\\Practice.vcxproj|solutionrelative:Practice\\array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E09C80C-FAA3-489C-B830-EB837BD353F8}|Practice\\Practice.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.43.34808\\INCLUDE\\ALGORITHM||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E09C80C-FAA3-489C-B830-EB837BD353F8}|Practice\\Practice.vcxproj|C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\knowhow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1E09C80C-FAA3-489C-B830-EB837BD353F8}|Practice\\Practice.vcxproj|solutionrelative:Practice\\knowhow.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -28,6 +25,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{1E09C80C-FAA3-489C-B830-EB837BD353F8}|Practice\\Practice.vcxproj|C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\string.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1E09C80C-FAA3-489C-B830-EB837BD353F8}|Practice\\Practice.vcxproj|solutionrelative:Practice\\string.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\algorithm||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,7 +49,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "algorithm",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\algorithm",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\algorithm",
@@ -57,8 +57,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\include\\algorithm",
               "ViewState": "AgIAAMsSAAAAAAAAAAAuwNkSAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-02T02:08:27.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T02:08:27.939Z"
             },
             {
               "$type": "Document",
@@ -68,14 +67,14 @@
               "RelativeDocumentMoniker": "Practice\\array.cpp",
               "ToolTip": "C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\array.cpp",
               "RelativeToolTip": "Practice\\array.cpp",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAswIkAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAAL8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-02T01:40:00.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "knowhow.cpp",
               "DocumentMoniker": "C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\knowhow.cpp",
               "RelativeDocumentMoniker": "Practice\\knowhow.cpp",
@@ -83,12 +82,11 @@
               "RelativeToolTip": "Practice\\knowhow.cpp",
               "ViewState": "AgIAABcAAAAAAAAAAAAswCkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-26T19:34:25.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-26T19:34:25.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "function.cpp",
               "DocumentMoniker": "C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\function.cpp",
               "RelativeDocumentMoniker": "Practice\\function.cpp",
@@ -100,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "algorithm.cpp",
               "DocumentMoniker": "C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\algorithm.cpp",
               "RelativeDocumentMoniker": "Practice\\algorithm.cpp",
@@ -112,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "container.cpp",
               "DocumentMoniker": "C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\container.cpp",
               "RelativeDocumentMoniker": "Practice\\container.cpp",
@@ -124,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "string.cpp",
               "DocumentMoniker": "C:\\Users\\kctck\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\Project1\\PS_Test\\Practice\\Practice\\string.cpp",
               "RelativeDocumentMoniker": "Practice\\string.cpp",
