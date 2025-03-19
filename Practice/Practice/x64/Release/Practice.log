@@ -1,6 +1,3 @@
-﻿  array.cpp
-  코드를 생성하고 있습니다.
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 160 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  코드를 생성했습니다.
-  Practice.vcxproj -> C:\Users\kctck\OneDrive\바탕 화면\Project1\PS_Test\Practice\x64\Release\Practice.exe
+﻿  2025.03.19.cpp
+MSVCRT.lib(exe_main.obj) : error LNK2001: 확인할 수 없는 외부 기호 main
+C:\Users\kctck\OneDrive\바탕 화면\Project1\PS_Test\Practice\x64\Release\Practice.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
