@@ -178,3 +178,90 @@ vector<int> solution(vector<string> genres, vector<int> plays) {
 }
 */
 
+/*
+vector<int> solution(vector<string> id_list, vector<string> report, int k) {
+	unordered_map<string, unordered_set<string>> reported_user;
+	unordered_map<string, int> count;
+
+	for (string& r : report)
+	{
+		stringstream ss(r);
+		string user_id, reported_id;
+
+		ss >> user_id >> reported_id;
+
+		reported_user[reported_id].insert(user_id);
+	}
+
+	for (auto& [reported_id, user_id_lst] : reported_user) {
+		if (user_id_lst.size() >= k) {
+			for (const string& uid : user_id_lst)
+			{
+				count[uid]++;
+			}
+		}
+	}
+
+	vector<int> answer;
+
+	for (string& id : id_list)
+	{
+		answer.push_back(count[id]);
+	}
+
+	return answer;
+}
+*/
+
+map<string, int> combi;
+
+void combination(string src, string dst, int depth)
+{
+	if (dst.size() == depth)
+	{
+		combi[dst]++;
+	}
+
+	else for (int i = 0; i < src.size(); ++i)
+	{
+		combination(src.substr(i + 1), dst + src[i], depth);
+	}
+}
+
+vector<string> solution(vector<string> orders, vector<int> course) {
+	vector<string> answer;
+
+	for (string& order : orders)
+	{
+		sort(order.begin(), order.end());
+	}
+
+	for (int len : course)
+	{
+		for (string order : orders)
+		{
+			combination(order, "", len);
+		}
+
+		int max_order = 0;
+
+		for (auto it : combi)
+		{
+			max_order = max(max_order, it.second);
+		}
+
+		for (auto it : combi)
+		{
+			if (max_order >= 2 && it.second == max_order)
+			{
+				answer.push_back(it.first);
+			}
+		}
+
+		combi.clear();
+	}
+
+	sort(answer.begin(), answer.end());
+
+	return answer;
+}
