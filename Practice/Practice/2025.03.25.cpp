@@ -407,6 +407,7 @@ int solution(int n, vector<vector<int>> computers) {
 }
 */
 
+/*
 vector<vector<int>> tree;
 vector<int> visited;
 vector<int> comp;
@@ -473,4 +474,190 @@ int solution(vector<int> info, vector<vector<int>> edges) {
 	dfs({ 0 });
 
 	return answer;
+}
+*/
+
+/*
+int solution(int N, vector<vector<int> > road, int K) {
+	vector<vector<pair<int, int>>> graph(N + 1);
+	vector<int> distances(N + 1, numeric_limits<int>::max());
+	vector<bool> visited(N + 1, false);
+
+	distances[1] = 0;
+
+	for (const auto& r : road)
+	{
+		int a = r[0];
+		int b = r[1];
+		int cost = r[2];
+
+		graph[a].push_back({ b, cost });
+		graph[b].push_back({ a, cost });
+	}
+
+	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> heap;
+	heap.push({ 0, 1 });
+
+	while (!heap.empty())
+	{
+		int dist = heap.top().first;
+		int node = heap.top().second;
+		heap.pop();
+
+		if (visited[node])
+		{
+			continue;
+		}
+
+		visited[node] = true;
+
+		for (const auto& next : graph[node])
+		{
+			int next_node = next.first;
+			int next_dist = next.second;
+			int cost = dist + next_dist;
+
+			if (cost < distances[next_node])
+			{
+				distances[next_node] = cost;
+				heap.push({ cost, next_node });
+			}
+		}
+	}
+
+	int count = 0;
+
+	for (int i = 1; i <= N; i++)
+	{
+		if (distances[i] <= K)
+		{
+			count++;
+		}
+	}
+
+	return count;
+}
+*/
+
+/*
+const int dx[] = { 0, 0, -1, 1 };
+const int dy[] = { -1, 1 , 0, 0 };
+const int STRAIGHT_COST = 100;
+const int CORNER_COST = 600;
+const int MAX_SIZE = 26;
+const int INF = numeric_limits<int>::max();
+
+struct Path
+{
+	int y;
+	int x;
+	int direction;
+};
+
+bool is_valid(int x, int y, int size)
+{
+	return y >= 0 && y < size && x >= 0 && x < size;
+}
+
+int solution(vector<vector<int>> board) {
+	int board_size = static_cast<int>(board.size());
+	int dist[MAX_SIZE][MAX_SIZE][4];
+
+	fill(&dist[0][0][0], &dist[0][0][0] + MAX_SIZE * MAX_SIZE * 4, -1);
+	queue<Path> q;
+
+	q.push({ 0,0,1 });
+	q.push({ 0,0,3 });
+
+	dist[0][0][1] = 0;
+	dist[0][0][3] = 0;
+
+	while (!q.empty())
+	{
+		auto [y, x, dir] = q.front();
+		q.pop();
+
+		int last_cost = dist[y][x][dir];
+
+		for (int i = 0; i < 4; ++i)
+		{
+			int ny = y + dy[i];
+			int nx = x + dx[i];
+
+			if (!is_valid(ny, nx, board_size) || board[ny][nx])
+			{
+				continue;
+			}
+
+			int new_cost = last_cost + (i == dir ? STRAIGHT_COST : CORNER_COST);
+
+			if (dist[ny][nx][i] == -1 || dist[ny][nx][i] > new_cost)
+			{
+				dist[ny][nx][i] = new_cost;
+				q.push({ ny, nx, i });
+			}
+		}
+	}
+
+	int answer = INF;
+
+	for (int i = 0; i < 4; ++i)
+	{
+		if (dist[board_size - 1][board_size - 1][i] != -1)
+		{
+			answer = min(answer, dist[board_size - 1][board_size - 1][i]);
+		}
+	}
+
+	return answer == INF ? -1 : answer;
+}
+*/
+
+int dfs(int node, int parent, const vector<vector<int>>& graph)
+{
+	int cnt = 1;
+
+	for (int child : graph[node])
+	{
+		if (child != parent)
+		{
+			cnt += dfs(child, node, graph);
+		}
+	}
+
+	return cnt;
+}
+
+int solution(int n, vector<vector<int>> wires) {
+	vector<vector<int>> graph(n + 1);
+
+	for (auto& wire : wires)
+	{
+		int a = wire[0];
+		int b = wire[1];
+
+		graph[a].push_back(b);
+		graph[b].push_back(a);
+	}
+
+	int min_diff = INT_MAX;
+
+	for (auto& wire : wires)
+	{
+		int a = wire[0];
+		int b = wire[1];
+
+		graph[a].erase(remove(graph[a].begin(), graph[a].end(), b), graph[a].end());
+		graph[b].erase(remove(graph[b].begin(), graph[b].end(), a), graph[b].end());
+
+		int cnt_a = dfs(a, b, graph);
+		int cnt_b = n - cnt_a;
+
+		min_diff = min(min_diff, abs(cnt_a - cnt_b));
+
+		graph[a].push_back(b);
+		graph[b].push_back(a);
+	}
+
+	return min_diff;
 }
