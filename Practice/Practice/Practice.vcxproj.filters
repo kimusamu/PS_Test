@@ -54,6 +54,9 @@
     <ClCompile Include="2025.03.26.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2025.03.28.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="practice.h">
